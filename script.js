@@ -1,4 +1,15 @@
 //your JS code here. If required.
-let level = n;
-const levels = document.getElementById("level");
-document.textContent("The level of the element is:n");
+// Find the element with id="level"
+const target = document.getElementById("level");
+
+let level = 0;
+let current = target;
+
+// Traverse upwards until no parent left
+while (current) {
+  level++;
+  current = current.parentElement;
+}
+
+// Show the result
+alert("The level of the element is: " + level);
